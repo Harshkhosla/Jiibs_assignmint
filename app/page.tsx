@@ -1,11 +1,11 @@
-import Image from "next/image";
 import Sidebar from "./component/Sidebar";
+import Table from "./component/Table";
 
 export default function Home() {
   return (
-    <div className="">
-      <Sidebar/>
-     
-    </div>
+    <Sidebar>
+      <h1 className="text-3xl font-bold mb-4">Program Section</h1>
+      <Table />
+    </Sidebar>
   );
 }
