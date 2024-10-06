@@ -9,7 +9,7 @@ export default function Sidebar() {
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start rtl:justify-end">
               
-              <a href="" className="flex ml-2 md:mr-24">
+              <a href="" className="flex ml-3 md:mr-24">
                 <img  src={logo.src}  className="h-10 mr-3"
                   alt="FlowBite Logo"
                 />
