@@ -22,7 +22,7 @@ export default function Table() {
             <button
               id="dropdownActionButton"
               data-dropdown-toggle="dropdownAction"
-              className="inline-flex items-center text-white bg-black border  focus:outline-none hover:bg-black focus:ring-4 focus:ring-gray-100  rounded-2xl text-sm px-3 py-1.5"
+              className=" hidden lg:inline-flex  items-center text-white bg-black border  focus:outline-none hover:bg-black focus:ring-4 focus:ring-gray-100  rounded-2xl text-sm px-3 py-1.5 "
               type="button"
             >
              
@@ -31,7 +31,7 @@ export default function Table() {
             <button
               id="dropdownActionButton"
               data-dropdown-toggle="dropdownAction"
-              className="inline-flex items-center text-black bg-slate-100  focus:outline-none hover:bg-slate-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-2xl text-sm px-3 py-1.5"
+              className="hidden lg:inline-flex  items-center text-black bg-slate-100  focus:outline-none hover:bg-slate-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-2xl text-sm px-3 py-1.5"
               type="button"
             >
              
@@ -40,73 +40,85 @@ export default function Table() {
   
           
           </div>
-  <div className="flex  space-x-4 content-center">
-
-
-          <label htmlFor="table-search" className="sr-only">
-            Search
-          </label>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                className="w-4 h-4 text-gray-500 "
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-              </svg>
-            </div>
-            <input
-              type="text"
-              id="table-search-users"
-              className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-2xl w-72 bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Search by name or email"
-            />
-            
-            
-          </div>
-          <div className="flex space-x-2">
-
-        
-          <button
-        id="exportButton"
-        className="inline-flex items-center text-black bg-gray-100 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-2"
-        type="button"
+          <div className="flex flex-wrap lg:flex-nowrap space-x-4 items-center justify-between content-center">
+  {/* Search Input */}
+  <label htmlFor="table-search" className="sr-only">
+    Search
+  </label>
+  <div className="relative w-full lg:w-auto mb-2 lg:mb-0">
+    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+      <svg
+        className="w-4 h-4 text-gray-500"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 20 20"
       >
-        <FaCloudUploadAlt className="w-5 h-5 mr-2" /> 
-        Export
-      </button>
+        <path
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+        />
+      </svg>
+    </div>
+    <input
+      type="text"
+      id="table-search-users"
+      className="block w-full lg:w-72 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+      placeholder="Search by name or email"
+    />
+  </div>
 
-     
-      <button
-        id="bulkAddButton"
-        className="inline-flex items-center text-black bg-gray-100 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-2"
-        type="button"
-      >
-        <FaCloudDownloadAlt className="w-5 h-5 mr-2" /> 
-        Bulk Add
-      </button>
+  {/* Buttons */}
+  <div className="flex space-x-2 w-full lg:w-auto">
+    {/* Export Button */}
+    <button
+      id="exportButton"
+      className="inline-flex items-center text-black bg-gray-100 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm w-full lg:w-auto sm:px-2 sm:py-1 px-4 py-2"
+      type="button"
+    >
+      <FaCloudUploadAlt className="w-5 h-5 mr-2" />
+      Export
+    </button>
 
-     
-      <button
-        id="addButton"
-        className="inline-flex items-center text-white bg-gray-900 focus:outline-none hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2"
-        type="button"
-      >
-        <FaUserPlus className="w-5 h-5 mr-2" /> 
-        Add
-      </button>
+    {/* Bulk Add Button (hidden on mobile, visible on larger screens) */}
+    <button
+      id="bulkAddButton"
+      className="hidden lg:inline-flex items-center text-black bg-gray-100 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-2"
+      type="button"
+    >
+      <FaCloudDownloadAlt className="w-5 h-5 mr-2" />
+      Bulk Add
+    </button>
+
+    {/* Add Button */}
+    <button
+      id="addButton"
+      className="inline-flex items-center text-white bg-gray-900 focus:outline-none hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm w-full lg:w-auto px-4 py-2"
+      type="button"
+    >
+      <FaUserPlus className="w-5 h-5 mr-2" />
+      Add
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
         </div>
-        </div>
-        </div>
+
+
+
+
+
+
+
+
         <table className="w-full text-sm text-left text-gray-500">
   <thead className="text-xs text-gray-700 uppercase bg-gray-50">
     <tr>
