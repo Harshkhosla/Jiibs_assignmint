@@ -31,7 +31,7 @@ export default function Table() {
             <button
               id="dropdownActionButton"
               data-dropdown-toggle="dropdownAction"
-              className="hidden lg:inline-flex  items-center text-black bg-slate-100  focus:outline-none hover:bg-slate-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-2xl text-sm px-3 py-1.5"
+              className="hidden lg:inline-flex  items-center text-black bg-slate-100  focus:outline-none hover:bg-slate-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-2xl text-sm  px-3 py-1.5"
               type="button"
             >
              
@@ -89,8 +89,8 @@ export default function Table() {
       className="hidden lg:inline-flex items-center text-black bg-gray-100 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-2"
       type="button"
     >
-      <FaCloudDownloadAlt className="w-5 h-5 mr-2" />
-      Bulk Add
+      <FaCloudDownloadAlt className="w-5 h-5 mr-2 " />
+      Bulk 
     </button>
 
     {/* Add Button */}
