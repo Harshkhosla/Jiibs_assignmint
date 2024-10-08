@@ -12,9 +12,9 @@ export default function Table() {
   return (
     <div className="relative overflow-x-auto rounded-lg shadow-md sm:rounded-lg">
       <div className="">
-        <h1 className="text-2xl font-bold ml-2">People</h1>
+        <h1 className="text-3xl font-bold ml-2 text-black">People</h1>
         <div className="flex space-x-8 mt-2">
-          <button className="text-black font-semibold  ml-2">People</button>
+          <button className="text-black font-semibold  ml-2 ">People</button>
           <button className="text-gray-500  ml-2">Properties</button>
         </div>
         <div className="w-full h-1 bg-gray-200 mt-2 mb-4">
@@ -102,16 +102,13 @@ export default function Table() {
         </div>
       </div>
 
-      {/* The right drawer */}
       {isDrawerOpen && (
         <div className="fixed inset-0 z-40 flex justify-end">
-          {/* Overlay with blur */}
           <div
             className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
             onClick={toggleDrawer}
           ></div>
 
-          {/* The actual drawer */}
           <div className="relative z-50 w-96 bg-white p-6 shadow-lg overflow-y-auto h-full">
             <h2 className="text-xl font-bold mb-4">Edit</h2>
             <form>
@@ -174,12 +171,12 @@ export default function Table() {
                 </label>
               </div>
             </th>
-            <th scope="col" className="px-6 py-3">Name</th>
-            <th scope="col" className="px-6 py-3">Status</th>
-            <th scope="col" className="px-6 py-3">Property</th>
-            <th scope="col" className="px-6 py-3">Unit</th>
-            <th scope="col" className="px-6 py-3">Role</th>
-            <th scope="col" className="px-6 py-3">Last Invited</th>
+            <th scope="col" className="px-6 py-3 text-base text-black font-normal">Name</th>
+            <th scope="col" className="px-6 py-3 text-base text-black font-normal">Status</th>
+            <th scope="col" className="px-6 py-3 text-base text-black font-normal">Property</th>
+            <th scope="col" className="px-6 py-3 text-base text-black font-normal">Unit</th>
+            <th scope="col" className="px-6 py-3 text-base text-black font-normal">Role</th>
+            <th scope="col" className="px-6 py-3 text-base text-black font-normal">Last invited</th>
           </tr>
         </thead>
         <tbody>
@@ -199,7 +196,7 @@ export default function Table() {
             <td className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
               <div>
                 <div className="text-base font-semibold">JP</div>
-                <div className="font-normal text-gray-500">
+                <div className="font-normal text-black">
                   jyoch12@gmail.com
                 </div>
               </div>
@@ -210,9 +207,9 @@ export default function Table() {
               </span>
             </td>
             <td className="px-6 py-4">-</td>
-            <td className="px-6 py-4">Admin</td>
-            <td className="px-6 py-4">ABC</td>
-            <td className="px-6 py-4">08/15/2024</td>
+            <td className="px-6 py-4 text-black">Admin</td>
+            <td className="px-6 py-4 text-black">ABC</td>
+            <td className="px-6 py-4 text-black">08/15/2024</td>
           </tr>
           {/* Additional rows can be added here */}
         </tbody>
